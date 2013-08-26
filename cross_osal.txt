@@ -1,0 +1,27 @@
+# Copiar en el OSAL el BSP de pc-linux a ardrone-linux
+cd cFE-6.1.1-OSS-release/osal/src/bsp
+cp -R pc-linux ardrone-linux
+# Parece que hay que cambiar solo el fichero con las opciones del compilador
+cd ardrone-linux
+cd make
+# compiler-opts.make
+# al final de todo añadir arm-...
+# Seleccionar BSP
+cd 
+cd cFE-6.1.1-OSS-release/osal/build
+#osal-config.mak // BSP = ardrone-linux 
+
+
+
+#### CFE
+##################################################
+
+# Parece que basta con copiar el directorio build/pc-linux a build/ardrone-lnux
+
+# cFE-6.1.1-OSS-release/build/pc-linux/cfe/cfe-config.mak
+# Tiene un PSP = pc-linux (al final)a
+
+
+# Tambien copiar ./psp/fsw/pc-linux a ardrone-linux
+
+# cFE-6.1.1-OSS-release/psp/fsw/ardrone-linux/make/compiler-opts.mak (modificarlo)
